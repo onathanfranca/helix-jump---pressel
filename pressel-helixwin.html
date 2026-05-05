@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a0a2e 0%, #2d1057 50%, #1a0a2e 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    .logo {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+      margin-bottom: 2.5rem;
+      opacity: 0.7;
+    }
+    .logo span { color: #e040fb; }
+    .icon-wrap {
+      width: 64px; height: 64px;
+      background: rgba(224,64,251,0.15);
+      border: 1px solid rgba(224,64,251,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin: 0 auto 1.5rem;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: linear-gradient(90deg, #e040fb, #7c4dff);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 44px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s, transform 0.1s;
+      box-shadow: 0 4px 24px rgba(224,64,251,0.35);
+    }
+    .btn:hover { opacity: 0.9; transform: scale(1.02); }
+    .loader { display: none; flex-direction: column; align-items: center; gap: 14px; }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: #e040fb;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loader-text { font-size: 14px; color: rgba(255,255,255,0.45); }
+  </style>
+</head>
+<body>
+  <div class="logo">Helix<span>Win</span></div>
+
+  <div id="screen1">
+    <div class="icon-wrap">🔒</div>
+    <h1>Confirme sua identidade</h1>
+    <button class="btn" onclick="confirmar()">Confirmar</button>
+  </div>
+
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">Verificando...</div>
+  </div>
+
+  <script>
+    function confirmar() {
+      document.getElementById('screen1').style.display = 'none';
+      document.getElementById('loader').style.display = 'flex';
+      setTimeout(function() {
+        window.location.href = 'https://helix-money.site/?ref=6BNGCZ';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
